@@ -353,10 +353,17 @@ function updatePlay(dt) {
     if(Math.abs(target-bx)>45) boss.x += boss.dir*24*dt;
     boss.attack=Math.max(0,boss.attack-dt);
     boss.hit=Math.max(0,boss.hit-dt);
-    if(Math.abs(target-bx)<48 && boss.attack<=0){
-      boss.attack=1.1;
-      damagePlayer();
-    }
+    const bossAttackBox = {
+  x: boss.x - 10,
+  y: boss.y + 8,
+  w: boss.w + 20,
+  h: boss.h - 8
+};
+
+if(rectsOverlap(player, bossAttackBox) && boss.attack <= 0){
+  boss.attack = 1.1;
+  damagePlayer();
+}
   }
 
   if(player.x>338 && boss.defeated) {
