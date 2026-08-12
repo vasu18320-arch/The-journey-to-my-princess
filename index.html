@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#05070b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>The Journey to My Princess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="gameShell" aria-label="The Journey to My Princess">
+      <div id="gameFrame">
+        <canvas id="game" width="360" height="540"></canvas>
+        <div id="toast" aria-live="polite"></div>
+      </div>
+
+      <section id="controls" aria-label="Game controls">
+        <button class="control" id="leftBtn">LEFT</button>
+        <button class="control" id="rightBtn">RIGHT</button>
+        <button class="control" id="jumpBtn">JUMP</button>
+        <button class="control act" id="actBtn">ACT</button>
+      </section>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
